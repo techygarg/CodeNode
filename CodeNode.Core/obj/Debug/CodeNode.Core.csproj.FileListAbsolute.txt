@@ -1,0 +1,4 @@
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\bin\Debug\CodeNode.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\bin\Debug\CodeNode.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\obj\Debug\CodeNode.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\obj\Debug\CodeNode.Core.pdb

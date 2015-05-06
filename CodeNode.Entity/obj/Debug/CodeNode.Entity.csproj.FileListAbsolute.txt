@@ -1,0 +1,6 @@
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\CodeNode.Entity.dll.config
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\CodeNode.Entity.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\CodeNode.Entity.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\obj\Debug\CodeNode.Entity.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\obj\Debug\CodeNode.Entity.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\obj\Debug\CodeNode.Entity.csprojResolveAssemblyReference.cache

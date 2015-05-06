@@ -1,0 +1,7 @@
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\obj\Debug\CodeNode.Datalayer.csprojResolveAssemblyReference.cache
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\CodeNode.Datalayer.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\CodeNode.Datalayer.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\CodeNode.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\CodeNode.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\obj\Debug\CodeNode.Datalayer.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\obj\Debug\CodeNode.Datalayer.pdb

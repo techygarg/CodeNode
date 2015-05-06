@@ -1,0 +1,14 @@
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Entity\bin\Debug\Helper.Entity.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Entity\bin\Debug\Helper.Entity.pdb
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Entity\obj\Debug\Helper.Entity.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Entity\obj\Debug\Helper.Entity.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\Helper.Entity.dll.config
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\Helper.Entity.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\Helper.Entity.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\EntityFramework.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\EntityFramework.xml
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\obj\Debug\Helper.Entity.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\obj\Debug\Helper.Entity.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Entity\obj\Debug\Helper.Entity.csprojResolveAssemblyReference.cache

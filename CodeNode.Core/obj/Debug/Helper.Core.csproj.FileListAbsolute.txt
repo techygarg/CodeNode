@@ -1,0 +1,9 @@
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Core\bin\Debug\Helper.Core.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Core\bin\Debug\Helper.Core.pdb
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Core\obj\Debug\Helper.Core.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Core\obj\Debug\Helper.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\bin\Debug\Helper.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\bin\Debug\Helper.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\obj\Debug\Helper.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\obj\Debug\Helper.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Core\obj\Debug\Helper.Core.csprojResolveAssemblyReference.cache

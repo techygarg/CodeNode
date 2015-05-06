@@ -1,0 +1,13 @@
+C:\BCG\Rahul\RAndD\WebHelper\Helper.ActiveDirectory\bin\Debug\Helper.ActiveDirectory.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.ActiveDirectory\bin\Debug\Helper.ActiveDirectory.pdb
+C:\BCG\Rahul\RAndD\WebHelper\Helper.ActiveDirectory\obj\Debug\Helper.ActiveDirectory.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.ActiveDirectory\obj\Debug\Helper.ActiveDirectory.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\Helper.ActiveDirectory.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\Helper.ActiveDirectory.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\Helper.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\Helper.Extention.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\Helper.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\Helper.Extention.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\obj\Debug\Helper.ActiveDirectory.csprojResolveAssemblyReference.cache
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\obj\Debug\Helper.ActiveDirectory.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\obj\Debug\Helper.ActiveDirectory.pdb

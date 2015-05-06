@@ -1,0 +1,7 @@
+C:\BCG\Rahul\RAndD\Helper\Helper.Extention\obj\Debug\CodeNode.Extention.csprojResolveAssemblyReference.cache
+C:\BCG\Rahul\RAndD\Helper\Helper.Extention\bin\Debug\CodeNode.Extention.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Extention\bin\Debug\CodeNode.Extention.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Extention\bin\Debug\CodeNode.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Extention\bin\Debug\CodeNode.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Extention\obj\Debug\CodeNode.Extention.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Extention\obj\Debug\CodeNode.Extention.pdb

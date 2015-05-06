@@ -1,0 +1,9 @@
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\obj\Debug\CodeNode.ActiveDirectory.csprojResolveAssemblyReference.cache
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\CodeNode.ActiveDirectory.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\CodeNode.ActiveDirectory.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\CodeNode.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\CodeNode.Extention.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\CodeNode.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\bin\Debug\CodeNode.Extention.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\obj\Debug\CodeNode.ActiveDirectory.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.ActiveDirectory\obj\Debug\CodeNode.ActiveDirectory.pdb

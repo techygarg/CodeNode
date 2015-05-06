@@ -1,0 +1,9 @@
+C:\BCG\Rahul\RAndD\WebHelper\Helper.WebApi\bin\Debug\Helper.WebApi.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.WebApi\bin\Debug\Helper.WebApi.pdb
+C:\BCG\Rahul\RAndD\WebHelper\Helper.WebApi\obj\Debug\Helper.WebApi.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.WebApi\obj\Debug\Helper.WebApi.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.WebApi\bin\Debug\Helper.WebApi.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.WebApi\bin\Debug\Helper.WebApi.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.WebApi\obj\Debug\Helper.WebApi.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.WebApi\obj\Debug\Helper.WebApi.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.WebApi\obj\Debug\Helper.WebApi.csprojResolveAssemblyReference.cache

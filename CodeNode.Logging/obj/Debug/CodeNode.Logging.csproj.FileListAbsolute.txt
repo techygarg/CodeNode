@@ -1,0 +1,6 @@
+C:\BCG\Rahul\RAndD\Helper\Helper.Logging\bin\Debug\log4net.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Logging\bin\Debug\log4net.xml
+C:\BCG\Rahul\RAndD\Helper\Helper.Logging\bin\Debug\CodeNode.Logging.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Logging\bin\Debug\CodeNode.Logging.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Logging\obj\Debug\CodeNode.Logging.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Logging\obj\Debug\CodeNode.Logging.pdb

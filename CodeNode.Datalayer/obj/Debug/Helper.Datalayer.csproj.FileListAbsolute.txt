@@ -1,0 +1,16 @@
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\bin\Debug\Helper.Datalayer.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\bin\Debug\Helper.Datalayer.pdb
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\obj\Debug\Helper.Datalayer.csprojResolveAssemblyReference.cache
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\obj\Debug\Helper.Datalayer.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\obj\Debug\Helper.Datalayer.pdb
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\bin\Debug\Helper.Extention.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\bin\Debug\Helper.Core.dll
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\bin\Debug\Helper.Extention.pdb
+C:\BCG\Rahul\RAndD\WebHelper\Helper.Datalayer\bin\Debug\Helper.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\Helper.Datalayer.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\Helper.Datalayer.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\Helper.Core.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\bin\Debug\Helper.Core.pdb
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\obj\Debug\Helper.Datalayer.csprojResolveAssemblyReference.cache
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\obj\Debug\Helper.Datalayer.dll
+C:\BCG\Rahul\RAndD\Helper\Helper.Datalayer\obj\Debug\Helper.Datalayer.pdb
