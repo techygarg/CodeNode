@@ -17,6 +17,41 @@ namespace CodeNode.Datalayer.Extentions
         /// <returns></returns>
         public static T MapToObject<T>(this INullSafeDataReader dataReader, bool useMapColumnAttribute = false)
         {
+            if (dataReader.Read())
+                return dataReader.GetObject<T>(useMapColumnAttribute);
+            else
+                return default(T);
+        }
+       
+        /// <summary>
+        ///     Get list of object of type T form data reader
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dataReader">The data reader.</param>
+        /// <param name="useMapColumnAttribute"></param>
+        /// <returns></returns>
+        public static List<T> MapToList<T>(this INullSafeDataReader dataReader, bool useMapColumnAttribute = false)
+        {
+            var resultList = new List<T>();
+            if (dataReader != null)
+            {
+                while (dataReader.Read())
+                {
+                    resultList.Add(dataReader.GetObject<T>(useMapColumnAttribute));
+                }
+            }
+            return resultList;
+        }
+
+        /// <summary>
+        /// Gets the object.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dataReader">The data reader.</param>
+        /// <param name="useMapColumnAttribute">if set to <c>true</c> [use map column attribute].</param>
+        /// <returns></returns>
+        private static T GetObject<T>(this INullSafeDataReader dataReader, bool useMapColumnAttribute = false)
+        {
             var instance = Activator.CreateInstance<T>();
             foreach (var prop in instance.GetType().GetProperties())
             {
@@ -25,7 +60,7 @@ namespace CodeNode.Datalayer.Extentions
                 {
                     // if attribute of type MapColumnAttribute found use it, else use property name itself
                     var attribute =
-                        prop.GetCustomAttributes(false).FirstOrDefault(x => x.GetType() == typeof (MapColumnAttribute));
+                        prop.GetCustomAttributes(false).FirstOrDefault(x => x.GetType() == typeof(MapColumnAttribute));
                     if (attribute != null)
                     {
                         var mapTo = attribute as MapColumnAttribute;
@@ -77,7 +112,7 @@ namespace CodeNode.Datalayer.Extentions
                             prop.SetValue(instance, dataReader.GetChar(memberName), null);
                             break;
                         case TypeCode.Object:
-                            if (prop.PropertyType == typeof (Guid))
+                            if (prop.PropertyType == typeof(Guid))
                                 prop.SetValue(instance, dataReader.GetGuid(memberName), null);
                             break;
                     }
@@ -95,24 +130,5 @@ namespace CodeNode.Datalayer.Extentions
             return instance;
         }
 
-        /// <summary>
-        ///     Get list of object of type T form data reader
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="dataReader">The data reader.</param>
-        /// <param name="useMapColumnAttribute"></param>
-        /// <returns></returns>
-        public static List<T> MapToList<T>(this INullSafeDataReader dataReader, bool useMapColumnAttribute = false)
-        {
-            var resultList = new List<T>();
-            if (dataReader != null)
-            {
-                while (dataReader.Read())
-                {
-                    resultList.Add(dataReader.MapToObject<T>(useMapColumnAttribute));
-                }
-            }
-            return resultList;
-        }
     }
 }

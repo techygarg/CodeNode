@@ -14,7 +14,8 @@ namespace CodeNode.Datalayer.Request
             _destinaitonTable = destinationTable;
         }
 
-        public AdhocBulkRequest(DataTable source, string destinationTable, int timeOut) : this(source, destinationTable)
+        public AdhocBulkRequest(DataTable source, string destinationTable, int timeOut)
+            : this(source, destinationTable)
         {
             _timeOut = timeOut;
         }
@@ -38,11 +39,8 @@ namespace CodeNode.Datalayer.Request
         public int TimeOut
         {
             get { return _timeOut; }
-            //set { _timeOut = value; }
         }
 
-        public int BatchSize { get; private set;
-            //set { _batchSize = value; }
-        }
+        public int BatchSize { get; private set; }
     }
 }

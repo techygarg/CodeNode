@@ -15,22 +15,20 @@ namespace CodeNode.ActiveDirectory
             const string ldapPath = "LDAP://<SID={0}>";
 
             var userWinId = HttpContext.Current.User.Identity as WindowsIdentity;
-
+            
             if (userWinId != null)
             {
                 var userSid = userWinId.User;
 
                 if (userSid != null)
                 {
-                    using (var userDirEntry = new DirectoryEntry(
-                        string.Format(CultureInfo.CurrentCulture, ldapPath, userSid.Value)
-                        ))
+                    using (var userDirEntry = new DirectoryEntry(string.Format(CultureInfo.CurrentCulture, ldapPath, userSid.Value)))
                     {
                         userGuid = userDirEntry.Guid;
                     }
                 }
             }
-
+            // this part execute when we run project in debug mode through IDE
             if (userGuid == Guid.Empty)
                 userGuid = UserPrincipal.Current.Guid.HasValue
                     ? UserPrincipal.Current.Guid.Value

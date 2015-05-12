@@ -18,19 +18,32 @@ namespace CodeNode.ActiveDirectory
 
         #region Constructor
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActiveDirectoryManager"/> class.
+        /// </summary>
         public ActiveDirectoryManager()
         {
             principatContext = GetPrincipalContext();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActiveDirectoryManager"/> class.
+        /// </summary>
+        /// <param name="domain">The domain. for e.g.: mycampany.com</param>
+        /// <param name="userName">Name of the user.</param>
+        /// <param name="password">The password of the user.</param>
         public ActiveDirectoryManager(string domain, string userName, string password)
         {
             principatContext = GetPrincipalContext(domain, userName, password);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActiveDirectoryManager"/> class.
+        /// </summary>
+        /// <param name="context">The PrincipalContext. If you can want to create some custom principal context on which rest of the operation will execute</param>
         public ActiveDirectoryManager(PrincipalContext context)
         {
-            Ensure.Argument.NotNull(context, "PrincipalContext can't null.");
+            Ensure.Argument.NotNull(context, "PrincipalContext");
             principatContext = context;
         }
 
@@ -208,8 +221,8 @@ namespace CodeNode.ActiveDirectory
                                 .Where(
                                     x =>
                                         search.ExactMatch
-                                            ? ((UserPrincipal) x).EmailAddress.IsEqual(search.SearchValue)
-                                            : ((UserPrincipal) x).EmailAddress.DoContains(search.SearchValue));
+                                            ? ((UserPrincipal)x).EmailAddress.IsEqual(search.SearchValue)
+                                            : ((UserPrincipal)x).EmailAddress.DoContains(search.SearchValue));
 
                         break;
                     case SearchOn.Firstname:
@@ -218,8 +231,8 @@ namespace CodeNode.ActiveDirectory
                                 .Where(
                                     x =>
                                         search.ExactMatch
-                                            ? ((UserPrincipal) x).GivenName.IsEqual(search.SearchValue)
-                                            : ((UserPrincipal) x).GivenName.DoContains(search.SearchValue));
+                                            ? ((UserPrincipal)x).GivenName.IsEqual(search.SearchValue)
+                                            : ((UserPrincipal)x).GivenName.DoContains(search.SearchValue));
 
                         break;
                     case SearchOn.MiddleName:
@@ -228,8 +241,8 @@ namespace CodeNode.ActiveDirectory
                                 .Where(
                                     x =>
                                         search.ExactMatch
-                                            ? ((UserPrincipal) x).MiddleName.IsEqual(search.SearchValue)
-                                            : ((UserPrincipal) x).MiddleName.DoContains(search.SearchValue));
+                                            ? ((UserPrincipal)x).MiddleName.IsEqual(search.SearchValue)
+                                            : ((UserPrincipal)x).MiddleName.DoContains(search.SearchValue));
 
                         break;
                     case SearchOn.SurName:
@@ -238,8 +251,8 @@ namespace CodeNode.ActiveDirectory
                                 .Where(
                                     x =>
                                         search.ExactMatch
-                                            ? ((UserPrincipal) x).Surname.IsEqual(search.SearchValue)
-                                            : ((UserPrincipal) x).Surname.DoContains(search.SearchValue));
+                                            ? ((UserPrincipal)x).Surname.IsEqual(search.SearchValue)
+                                            : ((UserPrincipal)x).Surname.DoContains(search.SearchValue));
 
                         break;
                 }
@@ -284,7 +297,7 @@ namespace CodeNode.ActiveDirectory
                     search.Surname = GetFormattedSearchString(criteria.ExactMatch, criteria.SearchValue);
                     break;
             }
-            var searcher = new PrincipalSearcher {QueryFilter = search};
+            var searcher = new PrincipalSearcher { QueryFilter = search };
             IEnumerable<Principal> users = searcher.FindAll();
             return users;
         }
@@ -303,12 +316,12 @@ namespace CodeNode.ActiveDirectory
         {
             var userPrincipal = GetUser(userName);
             var groupPrincipal = GetGroupPrincipal(groupName);
-
+            var result = false;
             if (userPrincipal != null && groupPrincipal != null)
             {
-                return groupPrincipal.Members.Contains(userPrincipal);
+                result = groupPrincipal.Members.Contains(userPrincipal);
             }
-            return false;
+            return result;
         }
 
         /// <summary>
