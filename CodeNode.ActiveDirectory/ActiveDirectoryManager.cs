@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.DirectoryServices.AccountManagement;
 using System.Linq;
 using System.Security.Principal;
+using System.Web;
 using CodeNode.Core.Utils;
 using CodeNode.Extention;
 
@@ -69,8 +70,8 @@ namespace CodeNode.ActiveDirectory
         /// <returns>Returns true if Expired</returns>
         public bool IsUserExpired(string userName)
         {
-            var oUserPrincipal = GetUser(userName);
-            return oUserPrincipal.AccountExpirationDate == null;
+            var userPrincipal = GetUser(userName);
+            return userPrincipal.AccountExpirationDate == null;
         }
 
         /// <summary>
@@ -90,8 +91,8 @@ namespace CodeNode.ActiveDirectory
         /// <returns>Returns true of Account is locked</returns>
         public bool IsAccountLocked(string userName)
         {
-            var oUserPrincipal = GetUser(userName);
-            return oUserPrincipal.IsAccountLockedOut();
+            var userPrincipal = GetUser(userName);
+            return userPrincipal.IsAccountLockedOut();
         }
 
         #endregion
@@ -99,7 +100,16 @@ namespace CodeNode.ActiveDirectory
         #region Search Methods
 
         /// <summary>
-        ///     Gets a certain user on Active Directory
+        /// Gets the current logged in window user.
+        /// </summary>
+        /// <returns>Current user UserPrincipal</returns>
+        public UserPrincipal GetCurrentUser()
+        {
+            return GetUser(IdentityType.Guid, Helper.GetCurrentUserAdGuid().ToString());
+        }
+
+        /// <summary>
+        ///     Gets a user by SamAccountName
         /// </summary>
         /// <param name="searchValue">The username to get</param>
         /// <returns>Returns the UserPrincipal Object</returns>
@@ -109,13 +119,14 @@ namespace CodeNode.ActiveDirectory
         }
 
         /// <summary>
-        ///     Gets the user.
+        ///     Gets the user based on search type and search value
         /// </summary>
         /// <param name="identityType">Type of the identity.</param>
         /// <param name="searchValue">The search value.</param>
         /// <returns></returns>
         public UserPrincipal GetUser(IdentityType identityType, string searchValue)
         {
+
             var userPrincipal = UserPrincipal.FindByIdentity(principatContext, identityType, searchValue);
             return userPrincipal;
         }
