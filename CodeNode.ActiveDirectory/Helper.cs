@@ -14,11 +14,11 @@ namespace CodeNode.ActiveDirectory
             var userGuid = Guid.Empty;
             const string ldapPath = "LDAP://<SID={0}>";
 
-            var userWinId = HttpContext.Current.User.Identity as WindowsIdentity;
-            
-            if (userWinId != null)
+            var winId = HttpContext.Current.User.Identity as WindowsIdentity;
+
+            if (winId != null)
             {
-                var userSid = userWinId.User;
+                var userSid = winId.User;
 
                 if (userSid != null)
                 {
