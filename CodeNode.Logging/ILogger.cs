@@ -13,5 +13,8 @@ namespace CodeNode.Logging
         void Error(object message, Exception exception);
         void Info(object message);
         void Warning(object message);
+        void Fatal(string message);
+        void Fatal(Exception exceptionToLog);
+        void Fatal(object message,Exception exceptionToLog);
     }
 }

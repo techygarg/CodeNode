@@ -54,7 +54,7 @@ namespace CodeNode.Logging
         /// <param name="ex">The ex.</param>
         /// <param name="exceptionString">The exception string.</param>
         /// <returns></returns>
-        private static string GetFormattedMessageFromExceptipon(Exception ex, string exceptionString)
+        private static string GeDetailFromExceptipon(Exception ex, string exceptionString)
         {
             var mesgAndStackTrace = string.Format(ExceptionMessageWithoutInnerException, Environment.NewLine,
                 exceptionString, Environment.NewLine, ex.Message, Environment.NewLine, ex.StackTrace);
@@ -63,7 +63,7 @@ namespace CodeNode.Logging
             {
                 mesgAndStackTrace = string.Format(ExceptionMessageWithInnerException, mesgAndStackTrace,
                     Environment.NewLine,
-                    GetFormattedMessageFromExceptipon(ex.InnerException, InnerExceptionName));
+                    GeDetailFromExceptipon(ex.InnerException, InnerExceptionName));
             }
 
             return mesgAndStackTrace + Environment.NewLine;
@@ -74,7 +74,7 @@ namespace CodeNode.Logging
         #region Public Methods
 
         /// <summary>
-        ///     The debug information.
+        ///    Log a message object with the log4net.Core.Level.Debug level.
         /// </summary>
         /// <param name="message">The message.</param>
         public void Debug(object message)
@@ -83,7 +83,25 @@ namespace CodeNode.Logging
         }
 
         /// <summary>
-        ///     The error message.
+        ///  Logs a message object with the log4net.Core.Level.Info level.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        public void Info(object message)
+        {
+            LoggerObject.Info(message);
+        }
+
+        /// <summary>
+        ///  Logs a message object with the log4net.Core.Level.Info Warning.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        public void Warning(object message)
+        {
+            LoggerObject.Warn(message);
+        }
+
+        /// <summary>
+        ///  Logs a message object with the log4net.Core.Level.Error level.
         /// </summary>
         /// <param name="message">The message.</param>
         public void Error(string message)
@@ -92,16 +110,16 @@ namespace CodeNode.Logging
         }
 
         /// <summary>
-        ///     Errors the specified ex.
+        ///    Log a exception with the log4net.Core.Level.Fatal level.
         /// </summary>
         /// <param name="ex">The ex.</param>
         public void Error(Exception ex)
         {
-            LoggerObject.Error(GetFormattedMessageFromExceptipon(ex, ExceptionName));
+            LoggerObject.Error(GeDetailFromExceptipon(ex, ExceptionName));
         }
 
         /// <summary>
-        ///     The error message.
+        ///  Log a message object with the log4net.Core.Level.Error level including the
         /// </summary>
         /// <param name="message">The message.</param>
         /// <param name="exception">The exception.</param>
@@ -111,23 +129,33 @@ namespace CodeNode.Logging
         }
 
         /// <summary>
-        ///     The information method.
+        /// Log a message object with the log4net.Core.Level.Fatal level.
         /// </summary>
         /// <param name="message">The message.</param>
-        public void Info(object message)
+        public void Fatal(string message)
         {
-            LoggerObject.Info(message);
+            LoggerObject.Fatal(message);
         }
 
         /// <summary>
-        ///     The Warning method.
+        /// Log a exception with the log4net.Core.Level.Fatal level.
         /// </summary>
-        /// <param name="message">The message.</param>
-        public void Warning(object message)
+        /// <param name="ex">The ex.</param>
+        public void Fatal(Exception ex)
         {
-            LoggerObject.Warn(message);
+            LoggerObject.Fatal(GeDetailFromExceptipon(ex, ExceptionName));
         }
 
+        /// <summary>
+        /// Log a message object with the log4net.Core.Level.Fatal level including the
+        //  stack trace of the System.Exception passed as a parameter.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="exception">The exception.</param>
+        public void Fatal(object message, Exception exception)
+        {
+            LoggerObject.Fatal(message, exception);
+        }
         #endregion
     }
 }
