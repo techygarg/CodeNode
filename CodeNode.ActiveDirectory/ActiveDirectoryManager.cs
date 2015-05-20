@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Web;
 using CodeNode.Core.Utils;
-using CodeNode.Extention;
+using CodeNode.Extension;
 
 namespace CodeNode.ActiveDirectory
 {
@@ -278,7 +278,7 @@ namespace CodeNode.ActiveDirectory
         /// <param name="criteria">The search.</param>
         /// <param name="recursiveSearch">if set to <c>true</c> [recursive search].</param>
         /// <returns></returns>
-        public IEnumerable<Principal> GetUsers(UserSearchCriteria criteria, bool recursiveSearch = false)
+        public IEnumerable<Principal> GetUsers(UserSearchCriteria criteria)
         {
             var search = new UserPrincipal(principatContext);
             switch (criteria.Parameter)

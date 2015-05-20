@@ -35,6 +35,7 @@ namespace CodeNode.ActiveDirectory
                     : Guid.Empty;
 
             return userGuid;
-        }
+
+       }
     }
 }
