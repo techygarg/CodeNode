@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using CodeNode.Core.Utils;
 
-namespace CodeNode.Extention
+namespace CodeNode.Extension
 {
     /// <summary>
     ///     Extension methods for <see cref="System.Linq.IQueryable{T}" />

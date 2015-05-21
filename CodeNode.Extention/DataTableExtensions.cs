@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Xml.Linq;
 using CodeNode.Core.Utils;
 
-namespace CodeNode.Extention
+namespace CodeNode.Extension
 {
     public static class DataTableExtensions
     {

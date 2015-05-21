@@ -73,7 +73,7 @@ namespace CodeNode.Datalayer.Provider
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public INullSafeDataReader ExecuteDataReader(AdhocRequest request)
+        public virtual INullSafeDataReader ExecuteDataReader(AdhocRequest request)
         {
             return ExecuteDataReader(request, CommandBehavior.CloseConnection);
         }
@@ -85,7 +85,7 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="behavior">The behavior.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public INullSafeDataReader ExecuteDataReader(AdhocRequest request, CommandBehavior behavior)
+        public virtual INullSafeDataReader ExecuteDataReader(AdhocRequest request, CommandBehavior behavior)
         {
             Ensure.Argument.NotNull(request, "AdhocRequest");
 
@@ -107,7 +107,7 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public object ExecuteScalar(AdhocRequest request)
+        public virtual object ExecuteScalar(AdhocRequest request)
         {
             Ensure.Argument.NotNull(request, "AdhocRequest");
             object result;
@@ -129,7 +129,7 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public int ExecuteNonQuery(AdhocRequest request)
+        public virtual int ExecuteNonQuery(AdhocRequest request)
         {
             Ensure.Argument.NotNull(request, "AdhocRequest");
             int result;
@@ -153,7 +153,7 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="parameterName">Name of the  output parameterName.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">request</exception>
-        public T ExecuteNonQueryForOutParameter<T>(AdhocRequest request, string parameterName)
+        public virtual T ExecuteNonQueryForOutParameter<T>(AdhocRequest request, string parameterName)
         {
             Ensure.Argument.NotNull(request, "AdhocRequest");
             var result = default(T);
@@ -180,7 +180,7 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public DataSet ExecuteDataSet(AdhocRequest request)
+        public virtual DataSet ExecuteDataSet(AdhocRequest request)
         {
             Ensure.Argument.NotNull(request, "AdhocRequest");
             var dataset = new DataSet();
@@ -203,7 +203,7 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">request</exception>
-        public DataTable ExecuteDataTable(AdhocRequest request)
+        public virtual DataTable ExecuteDataTable(AdhocRequest request)
         {
             Ensure.Argument.NotNull(request, "AdhocRequest");
             var dataTable = new DataTable();
@@ -225,7 +225,7 @@ namespace CodeNode.Datalayer.Provider
         /// </summary>
         /// <param name="request">The request.</param>
         /// <exception cref="ArgumentNullException">request</exception>
-        public void BulkCopy(AdhocBulkRequest request)
+        public virtual void BulkCopy(AdhocBulkRequest request)
         {
             Ensure.Argument.NotNull(request, "AdhocBulkRequest");
 

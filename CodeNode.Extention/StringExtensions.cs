@@ -6,10 +6,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using CodeNode.Core.Utils;
 
-namespace CodeNode.Extention
+namespace CodeNode.Extension
 {
     /// <summary>
     ///     Extensions for <see cref="System.String" />
+    ///    Credits: Some functions credit goes Ben-Foster and team
     /// </summary>
     public static class StringExtensions
     {

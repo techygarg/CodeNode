@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CodeNode.Core.Utils;
 
-namespace CodeNode.Extention
+namespace CodeNode.Extension
 {
     public static class ListExtensions
     {

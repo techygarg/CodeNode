@@ -1,10 +1,13 @@
 ﻿using System.Text.RegularExpressions;
 using CodeNode.Core.Utils;
 
-namespace CodeNode.Extention
+namespace CodeNode.Extension
 {
-    // Credits: Ben-Foster
-
+      
+    /// <summary>
+    /// Validate strings with Regex
+    /// Credits: Ben-Foster 
+    /// </summary>
     public static class ValidationExtensions
     {
         /// <summary>
