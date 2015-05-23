@@ -5,12 +5,12 @@ namespace CodeNode.Datalayer.Request
 {
     /// <summary>
     /// </summary>
-    public class AdhocRequest
+    public class DataRequest
     {
         #region "Private Variables"
 
         private int _timeout = -1;
-        private List<AdhocParameter> _params = new List<AdhocParameter>();
+        private List<DataParameter> _params = new List<DataParameter>();
         private CommandType _commandType = CommandType.Text;
 
         #endregion
@@ -18,32 +18,32 @@ namespace CodeNode.Datalayer.Request
         #region "Constructor"
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdhocRequest" /> class.
+        ///     Initializes a new instance of the <see cref="DataRequest" /> class.
         /// </summary>
         /// <param name="command">The command.</param>
-        public AdhocRequest(string command)
+        public DataRequest(string command)
         {
             Command = command;
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdhocRequest" /> class.
+        ///     Initializes a new instance of the <see cref="DataRequest" /> class.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <param name="commandType">Type of the command.</param>
-        public AdhocRequest(string command, CommandType commandType)
+        public DataRequest(string command, CommandType commandType)
             : this(command)
         {
             _commandType = commandType;
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdhocRequest" /> class.
+        ///     Initializes a new instance of the <see cref="DataRequest" /> class.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <param name="commandType">Type of the command.</param>
         /// <param name="prepare">if set to <c>true</c> [prepare].</param>
-        public AdhocRequest(string command, CommandType commandType, bool prepare)
+        public DataRequest(string command, CommandType commandType, bool prepare)
             : this(command, commandType)
         {
             Prepare = prepare;
@@ -74,7 +74,7 @@ namespace CodeNode.Datalayer.Request
         /// </summary>
         /// <returns></returns>
         /// <remarks></remarks>
-        public List<AdhocParameter> Params
+        public List<DataParameter> Params
         {
             get { return _params; }
             set { _params = value; }
@@ -93,7 +93,7 @@ namespace CodeNode.Datalayer.Request
         }
 
         /// <summary>
-        ///     Gets or sets a value indicating whether this <see cref="AdhocRequest" /> is prepare.
+        ///     Gets or sets a value indicating whether this <see cref="DataRequest" /> is prepare.
         /// </summary>
         /// <value>
         ///     <c>true</c> if prepare; otherwise, <c>false</c>.

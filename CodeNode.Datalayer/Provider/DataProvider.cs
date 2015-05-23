@@ -20,7 +20,7 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <param name="sqlCon">The SQL con.</param>
         /// <returns></returns>
-        private static SqlCommand CreateSqlCommand(AdhocRequest request, SqlConnection sqlCon)
+        private static SqlCommand CreateSqlCommand(DataRequest request, SqlConnection sqlCon)
         {
             var command = new SqlCommand(request.Command, sqlCon) {CommandType = request.CommandType};
 
@@ -73,7 +73,7 @@ namespace CodeNode.Datalayer.Provider
         /// </summary>
         /// <param name="request">The request.</param>
         /// <returns></returns>
-        public virtual INullSafeDataReader ExecuteDataReader(AdhocRequest request)
+        public virtual INullSafeDataReader ExecuteDataReader(DataRequest request)
         {
             return ExecuteDataReader(request, CommandBehavior.CloseConnection);
         }
@@ -85,9 +85,9 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="behavior">The behavior.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public virtual INullSafeDataReader ExecuteDataReader(AdhocRequest request, CommandBehavior behavior)
+        public virtual INullSafeDataReader ExecuteDataReader(DataRequest request, CommandBehavior behavior)
         {
-            Ensure.Argument.NotNull(request, "AdhocRequest");
+            Ensure.Argument.NotNull(request, "DataRequest");
 
             NullSafeDataReader datareader = null;
             var sqlCon = CreateConnection();
@@ -107,9 +107,9 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public virtual object ExecuteScalar(AdhocRequest request)
+        public virtual object ExecuteScalar(DataRequest request)
         {
-            Ensure.Argument.NotNull(request, "AdhocRequest");
+            Ensure.Argument.NotNull(request, "DataRequest");
             object result;
             using (var sqlCon = CreateConnection())
             {
@@ -129,9 +129,9 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public virtual int ExecuteNonQuery(AdhocRequest request)
+        public virtual int ExecuteNonQuery(DataRequest request)
         {
-            Ensure.Argument.NotNull(request, "AdhocRequest");
+            Ensure.Argument.NotNull(request, "DataRequest");
             int result;
             using (var sqlCon = CreateConnection())
             {
@@ -153,9 +153,9 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="parameterName">Name of the  output parameterName.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">request</exception>
-        public virtual T ExecuteNonQueryForOutParameter<T>(AdhocRequest request, string parameterName)
+        public virtual T ExecuteNonQueryForOutParameter<T>(DataRequest request, string parameterName)
         {
-            Ensure.Argument.NotNull(request, "AdhocRequest");
+            Ensure.Argument.NotNull(request, "DataRequest");
             var result = default(T);
 
             using (var sqlCon = CreateConnection())
@@ -180,9 +180,9 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="System.ArgumentNullException">request</exception>
-        public virtual DataSet ExecuteDataSet(AdhocRequest request)
+        public virtual DataSet ExecuteDataSet(DataRequest request)
         {
-            Ensure.Argument.NotNull(request, "AdhocRequest");
+            Ensure.Argument.NotNull(request, "DataRequest");
             var dataset = new DataSet();
 
             using (var sqlCon = CreateConnection())
@@ -203,9 +203,9 @@ namespace CodeNode.Datalayer.Provider
         /// <param name="request">The request.</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException">request</exception>
-        public virtual DataTable ExecuteDataTable(AdhocRequest request)
+        public virtual DataTable ExecuteDataTable(DataRequest request)
         {
-            Ensure.Argument.NotNull(request, "AdhocRequest");
+            Ensure.Argument.NotNull(request, "DataRequest");
             var dataTable = new DataTable();
 
             using (var sqlCon = CreateConnection())
@@ -225,7 +225,7 @@ namespace CodeNode.Datalayer.Provider
         /// </summary>
         /// <param name="request">The request.</param>
         /// <exception cref="ArgumentNullException">request</exception>
-        public virtual void BulkCopy(AdhocBulkRequest request)
+        public virtual void ExecuteBulkCopy(DataBulkRequest request)
         {
             Ensure.Argument.NotNull(request, "AdhocBulkRequest");
 

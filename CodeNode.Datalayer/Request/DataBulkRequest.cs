@@ -2,25 +2,25 @@
 
 namespace CodeNode.Datalayer.Request
 {
-    public class AdhocBulkRequest
+    public class DataBulkRequest
     {
         private readonly string _destinaitonTable;
         private readonly DataTable _sourceTable;
         private readonly int _timeOut = 500;
 
-        public AdhocBulkRequest(DataTable source, string destinationTable)
+        public DataBulkRequest(DataTable source, string destinationTable)
         {
             _sourceTable = source;
             _destinaitonTable = destinationTable;
         }
 
-        public AdhocBulkRequest(DataTable source, string destinationTable, int timeOut)
+        public DataBulkRequest(DataTable source, string destinationTable, int timeOut)
             : this(source, destinationTable)
         {
             _timeOut = timeOut;
         }
 
-        public AdhocBulkRequest(DataTable source, string destinationTable, int timeOut, int batchSize)
+        public DataBulkRequest(DataTable source, string destinationTable, int timeOut, int batchSize)
             : this(source, destinationTable, timeOut)
         {
             BatchSize = batchSize;

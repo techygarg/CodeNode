@@ -6,13 +6,13 @@ namespace CodeNode.Datalayer.Provider
 {
     public interface IDataProvider
     {
-        INullSafeDataReader ExecuteDataReader(AdhocRequest request);
-        INullSafeDataReader ExecuteDataReader(AdhocRequest request, CommandBehavior behavior);
-        object ExecuteScalar(AdhocRequest request);
-        int ExecuteNonQuery(AdhocRequest request);
-        T ExecuteNonQueryForOutParameter<T>(AdhocRequest request, string parametName);
-        DataSet ExecuteDataSet(AdhocRequest request);
-        DataTable ExecuteDataTable(AdhocRequest request);
-        void BulkCopy(AdhocBulkRequest request);
+        INullSafeDataReader ExecuteDataReader(DataRequest request);
+        INullSafeDataReader ExecuteDataReader(DataRequest request, CommandBehavior behavior);
+        object ExecuteScalar(DataRequest request);
+        int ExecuteNonQuery(DataRequest request);
+        T ExecuteNonQueryForOutParameter<T>(DataRequest request, string parametName);
+        DataSet ExecuteDataSet(DataRequest request);
+        DataTable ExecuteDataTable(DataRequest request);
+        void ExecuteBulkCopy(DataBulkRequest request);
     }
 }

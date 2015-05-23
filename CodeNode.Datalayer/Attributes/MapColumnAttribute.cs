@@ -1,7 +1,10 @@
 ﻿using System;
 
-namespace CodeNode.Datalayer.Atttributes
+namespace CodeNode.Datalayer.Attributes
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class MapColumnAttribute : Attribute
     {

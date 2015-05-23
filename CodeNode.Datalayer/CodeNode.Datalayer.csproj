@@ -42,7 +42,7 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-	<DocumentationFile>bin\Net40\Release\CodeNode.Datalayer.XML</DocumentationFile>
+    <DocumentationFile>bin\Net40\Release\CodeNode.Datalayer.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,16 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Atttributes\MapColumnAttribute.cs" />
+    <Compile Include="Attributes\MapColumnAttribute.cs" />
     <Compile Include="Provider\DataProvider.cs" />
-    <Compile Include="Request\AdhocParameter.cs" />
-    <Compile Include="Request\AdhocRequest.cs" />
-    <Compile Include="Request\AdhocBulkRequest.cs" />
+    <Compile Include="Request\DataParameter.cs" />
+    <Compile Include="Request\DataRequest.cs" />
+    <Compile Include="Request\DataBulkRequest.cs" />
     <Compile Include="Provider\IDataProvider.cs" />
     <Compile Include="Provider\BaseDataProvider.cs" />
     <Compile Include="Reader\INullSafeDataReader.cs" />
     <Compile Include="Reader\NullSafeDataReader.cs" />
-    <Compile Include="Extentions\NullSafeDataReaderExtention.cs" />
+    <Compile Include="Extensions\NullSafeDataReaderExtention.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -69,9 +69,6 @@
       <Project>{fa0d8f27-a760-479e-8f46-9059158629d1}</Project>
       <Name>CodeNode.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

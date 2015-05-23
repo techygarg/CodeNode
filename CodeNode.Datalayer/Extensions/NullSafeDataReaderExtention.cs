@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using CodeNode.Datalayer.Atttributes;
+using CodeNode.Datalayer.Attributes;
 using CodeNode.Datalayer.Reader;
 
-namespace CodeNode.Datalayer.Extentions
+namespace CodeNode.Datalayer.Extensions
 {
+
+
+    /// <summary>
+    /// 
+    /// </summary>
     public static class NullSafeDataReaderExtention
     {
+
+
         /// <summary>
         ///     Get Object of type T form data reader
         /// </summary>

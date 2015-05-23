@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using CodeNode.Core.Utils;
 
 namespace CodeNode.Datalayer.Provider
 {
@@ -53,8 +54,7 @@ namespace CodeNode.Datalayer.Provider
         /// <exception cref="System.NullReferenceException">Connection string not set.</exception>
         protected virtual SqlConnection CreateConnection()
         {
-            if (string.IsNullOrWhiteSpace(_connectionString))
-                throw new NullReferenceException("Connection string not set.");
+            Ensure.Argument.NotNullOrEmpty(_connectionString);
 
             var connection = new SqlConnection(_connectionString);
             connection.Open();

@@ -4,7 +4,7 @@ using System.Data;
 namespace CodeNode.Datalayer.Request
 {
     [Serializable]
-    public class AdhocParameter
+    public class DataParameter
     {
         #region "Private Variables"
 
@@ -53,36 +53,36 @@ namespace CodeNode.Datalayer.Request
         #region "Constructors"
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdhocParameter" /> class.
+        ///     Initializes a new instance of the <see cref="DataParameter" /> class.
         /// </summary>
         /// <param name="paramName">Name of the parameter.</param>
         /// <param name="paramValue">The parameter value.</param>
-        public AdhocParameter(string paramName, object paramValue)
+        public DataParameter(string paramName, object paramValue)
         {
             _paramName = paramName;
             _paramValue = paramValue;
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdhocParameter" /> class.
+        ///     Initializes a new instance of the <see cref="DataParameter" /> class.
         /// </summary>
         /// <param name="paramName">Name of the parameter.</param>
         /// <param name="paramValue">The parameter value.</param>
         /// <param name="paramDirection">The parameter direction.</param>
-        public AdhocParameter(string paramName, object paramValue, ParameterDirection paramDirection)
+        public DataParameter(string paramName, object paramValue, ParameterDirection paramDirection)
             : this(paramName, paramValue)
         {
             _paramDirection = paramDirection;
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdhocParameter" /> class.
+        ///     Initializes a new instance of the <see cref="DataParameter" /> class.
         /// </summary>
         /// <param name="size">The size.</param>
         /// <param name="dataType">Type of the data.</param>
         /// <param name="paramName">Name of the parameter.</param>
         /// <param name="paramValue">The parameter value.</param>
-        public AdhocParameter(int size, SqlDbType dataType, string paramName, object paramValue)
+        public DataParameter(int size, SqlDbType dataType, string paramName, object paramValue)
             : this(paramName, paramValue)
         {
             _size = size;
@@ -90,14 +90,14 @@ namespace CodeNode.Datalayer.Request
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="AdhocParameter" /> class.
+        ///     Initializes a new instance of the <see cref="DataParameter" /> class.
         /// </summary>
         /// <param name="size">The size.</param>
         /// <param name="dataType">Type of the data.</param>
         /// <param name="paramName">Name of the parameter.</param>
         /// <param name="paramValue">The parameter value.</param>
         /// <param name="paramDirection">The parameter direction.</param>
-        public AdhocParameter(int size, SqlDbType dataType, string paramName, object paramValue,
+        public DataParameter(int size, SqlDbType dataType, string paramName, object paramValue,
             ParameterDirection paramDirection)
             : this(paramName, paramValue, paramDirection)
         {
