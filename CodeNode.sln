@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeNode.Extension", "CodeNode.Extention\CodeNode.Extension.csproj", "{8332EF8B-578D-4BC1-9589-BF4823B7834B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeNode.Logging", "CodeNode.Logging\CodeNode.Logging.csproj", "{FD5595E0-D0AC-4A11-AE60-A44405C7D418}"
@@ -16,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeNode.ActiveDirectory", "CodeNode.ActiveDirectory\CodeNode.ActiveDirectory.csproj", "{ACB904A4-DB76-434B-A952-0F24AEABB5AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeNode.Core", "CodeNode.Core\CodeNode.Core.csproj", "{FA0D8F27-A760-479E-8F46-9059158629D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BD522EE5-F0E6-4F44-83C6-A611E1FF986B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeNode.Extension.Tests", "CodeNode.Extension.Tests\CodeNode.Extension.Tests.csproj", "{3A3CA114-F54A-4024-A49A-50EED68C5E49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,8 +50,8 @@ Global
 		{539F9897-6879-40F1-A25F-B8E9DD4630C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Debug|Any CPU.ActiveCfg = Release|Any CPU
 		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Net40|Any CPU.ActiveCfg = Net40|Any CPU
-		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Net40|Any CPU.Build.0 = Net40|Any CPU
+		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Net40|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Net40|Any CPU.Build.0 = Debug|Any CPU
 		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F77E55-DE42-44BA-8E68-8AFA39FC819A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA31B885-C316-4658-ABA6-21382E10D783}.Debug|Any CPU.ActiveCfg = Release|Any CPU
@@ -72,8 +78,17 @@ Global
 		{FA0D8F27-A760-479E-8F46-9059158629D1}.Net40|Any CPU.Build.0 = Net40|Any CPU
 		{FA0D8F27-A760-479E-8F46-9059158629D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA0D8F27-A760-479E-8F46-9059158629D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A3CA114-F54A-4024-A49A-50EED68C5E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3CA114-F54A-4024-A49A-50EED68C5E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A3CA114-F54A-4024-A49A-50EED68C5E49}.Net40|Any CPU.ActiveCfg = Release|Any CPU
+		{3A3CA114-F54A-4024-A49A-50EED68C5E49}.Net40|Any CPU.Build.0 = Release|Any CPU
+		{3A3CA114-F54A-4024-A49A-50EED68C5E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A3CA114-F54A-4024-A49A-50EED68C5E49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A3CA114-F54A-4024-A49A-50EED68C5E49} = {BD522EE5-F0E6-4F44-83C6-A611E1FF986B}
 	EndGlobalSection
 EndGlobal

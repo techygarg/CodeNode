@@ -22,7 +22,7 @@ namespace CodeNode.Extension
         /// <returns></returns>
         public static bool IsEqual(this string source, string target)
         {
-            return source.Equals(target, StringComparison.InvariantCultureIgnoreCase);
+            return string.Equals(source, target, StringComparison.InvariantCultureIgnoreCase);
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace CodeNode.Extension
         /// <returns></returns>
         public static bool DoContains(this string source, string target)
         {
-            return source.Contains(target, StringComparison.InvariantCultureIgnoreCase);
+            return source == null || target == null ? false : source.Contains(target, StringComparison.InvariantCultureIgnoreCase);
         }
 
         public static SecureString ToSecureString(this string value)
@@ -123,7 +123,7 @@ namespace CodeNode.Extension
         {
             Ensure.Argument.NotNull(value, "value");
 
-            var segments = value.Split(new[] {'/'}, StringSplitOptions.RemoveEmptyEntries);
+            var segments = value.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
             var result = segments.Aggregate(string.Empty, (slug, segment) => slug + ("/" + segment.ToSlug()));
             return result.Trim('/');
         }
@@ -178,7 +178,7 @@ namespace CodeNode.Extension
             return source.IndexOf(input, comparison) >= 0;
         }
 
-   
+
         private static string RemoveAccent(string value)
         {
             var bytes = Encoding.GetEncoding("Cyrillic").GetBytes(value);
