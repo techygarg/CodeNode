@@ -5,7 +5,7 @@ I have just added some modules as of now but I firmly believe number of such mod
 I have added some blog entries to explain a little bit about modules and code.
 Kindly visit to get more details :
 
-* [CodeNode.ActiveDirectory](www.codingeek.com/dotnet/active-directory-search-module)
+* [CodeNode.ActiveDirectory](http://www.codingeek.com/dotnet/active-directory-search-module)
 
 * [CodeNode.Logging](http://www.codingeek.com/dotnet/logger)
 
