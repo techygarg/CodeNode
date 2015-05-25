@@ -40,18 +40,60 @@ namespace CodeNode.Extension.Tests
             result.Should().Be(testResult);
         }
 
-        [TestCase("my string is this", 17)]        
+        [TestCase("my string is this", 17)]
         public void ShouldReturnResultForSecuredString(string str, int result)
         {
             str.ToSecureString().Length.Should().Be(result);
         }
 
         [TestCase("my string is this", "my string is this")]
-        [TestCase(EMPTY, null)]        
+        [TestCase(EMPTY, null)]
         public void ShouldReturnResultWhenStringIsEmptyNullOrNonNull(string str, string result)
         {
             str.NullIfEmpty().Should().Be(result);
         }
 
+        [Test]
+        public void ShouldReturnResultWhenSplittingAndTrimmingString()
+        {
+            var inputString = " hi;my;name ;is, ,;test ";
+            var splitterArray = new char[] { ';', ',' };
+            inputString.SplitAndTrim(splitterArray).Should().Equal(new List<string>() { "hi", "my", "name", "is", string.Empty, "test" });
+        }
+
+        [Test]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void ShouldThrowExceptionWhenSplittingAndTrimmingNullString()
+        {
+            string inputString = null;
+            inputString.SplitAndTrim();
+        }
+
+        [TestCase("hi this is test string. will this pass?", "hi-this-is-test-string-will-this-pass", null)]
+        [TestCase("hi this is test string. will this pass?", "hi-this", 8)]
+        [TestCase("hi this is test string. will this pass?", "hi", 3)]
+        [TestCase("hi this is test string. will this pass?", "hi", 2)]
+        [TestCase("hi this is test string. will this pass?", EMPTY, 0)]
+        [TestCase("hi-this-is-test-string-will-this-pass", "hi-this-is-test-string-will-this-pass", null)]
+        public void ShouldReturnURLSlugFromTheStringPassed(string input, string expected, int? maxSize)
+        {
+            input.ToSlug(maxSize).Should().Be(expected);
+        }
+
+        [TestCase("ThisIsMyTest", "This Is My Test")]
+        [TestCase("ThisisMyTest", "Thisis My Test")]
+        [TestCase("ThisisMy Test", "Thisis My Test"), Ignore("This scenario needs to be fixed. Currently it is given two spaces which is undesirable.")]
+        public void ShouldSeparatePascalCaseString(string input, string output)
+        {
+            input.SeparatePascalCase().Should().Be(output);
+        }
+
+        [TestCase(EMPTY)]
+        [TestCase(null)]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldThrowExceptionWhenStringIsNullOrEmptyForSeparatePascalCase(string input)
+        {
+            input.SeparatePascalCase();
+        }
     }
 }
