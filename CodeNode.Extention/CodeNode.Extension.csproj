@@ -42,7 +42,7 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-	<DocumentationFile>bin\Net40\Release\CodeNode.Extension.XML</DocumentationFile>
+    <DocumentationFile>bin\Net40\Release\CodeNode.Extension.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,7 +57,7 @@
     <Compile Include="DataTableExtensions.cs" />
     <Compile Include="DateTimeExtentions.cs" />
     <Compile Include="EnumerableExtensions.cs" />
-    <Compile Include="EnumExtentions.cs" />
+    <Compile Include="EnumExtensions.cs" />
     <Compile Include="ListExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryableExtensions.cs" />
