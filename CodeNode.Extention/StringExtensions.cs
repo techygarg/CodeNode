@@ -33,7 +33,7 @@ namespace CodeNode.Extension
         /// <returns></returns>
         public static bool DoContains(this string source, string target)
         {
-            return source == null || target == null ? false : source.Contains(target, StringComparison.InvariantCultureIgnoreCase);
+            return source != null && target != null && source.Contains(target, StringComparison.InvariantCultureIgnoreCase);
         }
 
         public static SecureString ToSecureString(this string value)

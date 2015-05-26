@@ -61,7 +61,7 @@ namespace CodeNode.Extension.Tests
         [ExpectedException(typeof(ArgumentException))]
         public void ShouldThrowExceptionIfAnEnumTypeIsNotPassedForToEnum()
         {
-            var enumType = "TestEnum4".ToEnum<MyStruct>();            
+            "TestEnum4".ToEnum<MyStruct>();
         }
 
         [Test]
