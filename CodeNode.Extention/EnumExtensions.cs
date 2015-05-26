@@ -4,7 +4,7 @@ using CodeNode.Core.Utils;
 
 namespace CodeNode.Extension
 {
-    public static class EnumExtentions
+    public static class EnumExtensions
     {
         /// <summary>
         ///     Enum To the dictionary. typeof(Enum).ToDictionary();
