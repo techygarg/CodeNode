@@ -7,38 +7,38 @@ namespace CodeNode.Extension
 {
     public static class EnumerableExtensions
     {
-        /// <summary>
-        /// Aggregates the specified aggregate function. 
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="items">The items.</param>
-        /// <param name="aggregateFunction">The aggregate function.</param>
-        /// <returns></returns>
-        public static T Aggregate<T>(this IEnumerable<T> items, Func<T, T, T> aggregateFunction)
-        {
-            Ensure.Argument.NotNull(items, "IEnumerable");
-            Ensure.Argument.NotNull(aggregateFunction, "AggregateFunction");
-            return Aggregate(items, default(T), aggregateFunction);
-        }
+        ///// <summary>
+        ///// Aggregates the specified aggregate function. 
+        ///// </summary>
+        ///// <typeparam name="T"></typeparam>
+        ///// <param name="items">The items.</param>
+        ///// <param name="aggregateFunction">The aggregate function.</param>
+        ///// <returns></returns>
+        //public static T Aggregate<T>(this IEnumerable<T> items, Func<T, T, T> aggregateFunction)
+        //{
+        //    Ensure.Argument.NotNull(items, "IEnumerable");
+        //    Ensure.Argument.NotNull(aggregateFunction, "AggregateFunction");
+        //    return Aggregate(items, default(T), aggregateFunction);
+        //}
 
-        /// <summary>
-        /// Aggregates the specified default value. Return default value in place of null.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="items">The items.</param>
-        /// <param name="defaultValue">The default value.</param>
-        /// <param name="aggregateFunction">The aggregate function.</param>
-        /// <returns></returns>
-        public static T Aggregate<T>(this IEnumerable<T> items, T defaultValue,Func<T, T, T> aggregateFunction)
-        {
-            Ensure.Argument.NotNull(items, "IEnumerable");
-            Ensure.Argument.NotNull(aggregateFunction, "AggregateFunction");
+        ///// <summary>
+        ///// Aggregates the specified default value. Return default value in place of null.
+        ///// </summary>
+        ///// <typeparam name="T"></typeparam>
+        ///// <param name="items">The items.</param>
+        ///// <param name="defaultValue">The default value.</param>
+        ///// <param name="aggregateFunction">The aggregate function.</param>
+        ///// <returns></returns>
+        //public static T Aggregate<T>(this IEnumerable<T> items, T defaultValue,Func<T, T, T> aggregateFunction)
+        //{
+        //    Ensure.Argument.NotNull(items, "IEnumerable");
+        //    Ensure.Argument.NotNull(aggregateFunction, "AggregateFunction");
 
-            var enumerable = items as IList<T> ?? items.ToList();
-            return !enumerable.Any()
-                ? defaultValue
-                : enumerable.Aggregate(aggregateFunction);
-        }
+        //    var enumerable = items as IList<T> ?? items.ToList();
+        //    return !enumerable.Any()
+        //        ? default(T)
+        //        : enumerable.Aggregate(aggregateFunction);
+        //}
 
         /// <summary>
         /// Invoke action for all elements
