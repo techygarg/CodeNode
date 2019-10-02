@@ -1,4 +1,5 @@
-### Welcome to CodeNode.
+### Welcome to CodeNode. 
+(This repo is archived. We are moving the stuff from here https://github.com/WeTheBoffins/ and will migrate them to .NetStandard2.0)
 Project CodeNode is an idea to have daily life useful code component and libraries at one place and to enhance them over time with the help of dev community. 
 I have just added some modules as of now but I firmly believe number of such modules will grow soon.
 
